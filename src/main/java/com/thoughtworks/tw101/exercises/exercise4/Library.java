@@ -12,5 +12,20 @@ public class Library {
     }
 
     public void printBooksContaining(String partialBookTitle) {
+        for(String bookTitle : books) {
+            if(partialTitleMatch(bookTitle, partialBookTitle)) {
+                printStream.println(bookTitle);
+            }
+        }
     }
+
+    private boolean partialTitleMatch(String fullTitle, String partialTitle) {
+        if (fullTitle.toLowerCase().contains(partialTitle.toLowerCase())) {
+            return true;
+        }
+        return false;
+    }
+
 }
+
+
