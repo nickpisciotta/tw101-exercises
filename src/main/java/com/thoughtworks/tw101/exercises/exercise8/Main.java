@@ -13,14 +13,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        GuessingGame game = new GuessingGame();
-        int userGuess;
         System.out.println("Please guess a number between 1 and 100");
+        GuessingGame game = new GuessingGame();
         ArrayList<Integer> guesses = new ArrayList<>();
 
         try {
             while (!game.getIsGameOver()) {
-                userGuess = reader.nextInt();
+                int userGuess = reader.nextInt();
                 guesses.add(userGuess);
                 game.guess(userGuess);
             }
