@@ -26,6 +26,8 @@ package com.thoughtworks.tw101.introductory_programming_exercises;
 //        14
 //        FizzBuzz
 
+import java.util.ArrayList;
+
 public class FizzBuzz {
     public static void main(String[] args) {
         fizzBuzz();
@@ -33,5 +35,15 @@ public class FizzBuzz {
 
     private static void fizzBuzz() {
 
+        for(int i=1; i <= 100; i++) {
+            String x = "";
+            if (i % 3 == 0) {
+                x += "Fizz";
+            }
+            if (i % 5 == 0) {
+                x += ("Buzz");
+            }
+            System.out.println((x.length() == 0 ? i : x));
+        }
     }
 }
