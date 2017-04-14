@@ -1,9 +1,11 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
+import java.util.InputMismatchException;
+
 /**
  * Created by nickpisciotta on 3/30/17.
  */
-public class GussingGame {
+public class GuessingGame {
 
     private boolean isGameOver = false;
     private int randomNumber = (int) (Math.random() * 100);
@@ -23,6 +25,7 @@ public class GussingGame {
         }
         return false;
     }
+
 
     public boolean getIsGameOver() {
         return isGameOver;

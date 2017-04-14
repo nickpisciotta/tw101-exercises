@@ -17,20 +17,21 @@ public class Main {
         GuessingGame game = new GuessingGame();
         ArrayList<Integer> guesses = new ArrayList<>();
 
-        try {
-            while (!game.getIsGameOver()) {
+        while (!game.getIsGameOver()) {
+            try {
                 int userGuess = reader.nextInt();
                 guesses.add(userGuess);
                 game.guess(userGuess);
-            }
-        }   catch (InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("You need to enter a number");
-
-        }
-            System.out.println("Here are your guesses: ");
-            for (int guess : guesses) {
-                System.out.println(guess);
+                reader.next();
             }
+        }
+
+        System.out.println("Here are your guesses: ");
+        for (int guess : guesses) {
+            System.out.println(guess);
+        }
 
     }
 }
