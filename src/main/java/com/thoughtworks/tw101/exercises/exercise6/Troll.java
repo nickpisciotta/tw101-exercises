@@ -10,9 +10,7 @@ public class Troll implements Monster {
 
 
     @Override
-    public void takeDamage(int amount) {
-      hitPoints -= amount;
-    }
+    public void takeDamage(int amount) {hitPoints -= amount/2;}
 
     @Override
     public void reportStatus() {
